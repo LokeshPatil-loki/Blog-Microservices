@@ -18,6 +18,8 @@ app.post("/events",(req,res) => {
     res.send({status: "OK"})
 });
 
-
+app.get("/events", (req, res) => {
+    res.send(events);
+})
 
 app.listen(PORT,()=>console.log("listening on " + PORT));
