@@ -3,7 +3,10 @@ const axios = require("axios");
 const PORT = 4003;
 const app = express();
 
+app.use(express.json());
+
 app.post("/events", async (req, res) => {
+    console.log(req.body)
     const {type, data} = req.body;
 
     if(type === "CommentCreated"){
