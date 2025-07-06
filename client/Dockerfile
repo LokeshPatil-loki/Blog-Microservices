@@ -1,4 +1,5 @@
 FROM node:alpine
+LABEL org.opencontainers.image.source=https://github.com/LokeshPatil-loki/Blog-Microservices
 ENV NODE_OPTIONS=--openssl-legacy-provider
 ENV CI=true
 ENV WDS_SOCKET_PORT=0
@@ -9,5 +10,7 @@ COPY ./package.json ./
 RUN npm install
 
 COPY ./ ./
+
+
 
 CMD ["npm", "start"]
