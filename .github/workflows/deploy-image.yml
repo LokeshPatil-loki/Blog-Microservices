@@ -39,7 +39,7 @@ jobs:
             type=raw,value=latest
 
       - name: Build and push Docker image
-        uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
+        uses: docker/build-push-action@55146d969b0dff1a5c12630229609757af5b1081
         with:
           context: ./client
           file: ./client/Dockerfile
